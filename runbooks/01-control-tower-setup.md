@@ -23,8 +23,13 @@ Establish a new AWS Control Tower landing zone in the training organization, sim
 ## Detailed procedure
 
 ### Step 1 – Review Control Tower status
+“Navigated to AWS Control Tower in us-east-1 using the management account.”
 
-(TBD – to be filled while walking through the console.)
+Observed banner message confirming the previous landing zone has been decommissioned, with a link to cleanup documentation.
+
+Confirmed Control Tower now shows the ‘Enable AWS Control Tower’ call-to-action, indicating a fresh landing zone can be created.
+
+Recorded Control Tower home Region as us-east-1 for this training org.
 
 ### Step 2 – Validate cleanup prerequisites
 
