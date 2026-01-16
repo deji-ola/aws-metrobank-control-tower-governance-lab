@@ -20,3 +20,7 @@
 - Searched for aws-controltower/CloudTrailLogs in us-east-1.
 - Log group not present; no CloudWatch cleanup required.
 
+## CloudWatch log groups (pre-cleanup)
+
+- Searched for aws-controltower/CloudTrailLogs in us-east-1 CloudWatch Logs.
+- Log group not present; no CloudWatch cleanup required before re-enabling Control Tower.
