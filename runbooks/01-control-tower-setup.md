@@ -79,3 +79,30 @@ Recorded Control Tower home Region as us-east-1 for this training org.
     - Cost control: avoids additional Config/CloudTrail aggregator setup.
 16. Clicked **Next** → proceed to "Review and enable AWS Control Tower".
 
+#### 3.5 Review and enable AWS Control Tower
+17. **Review screen summary**:
+    - **Setup**: Full environment (complete landing zone)
+    - **Regions**: Home Region us-east-1, Additional Region eu-west-2
+    - **OUs created**: Security (foundational), Sandbox (additional)
+    - **Organization ID**: o-8phshr6ll4
+    - **Service integrations**: All disabled (Config, CloudTrail, IAM Identity Center, Backup)
+18. **Final Metro Bank POC configuration**:
+    - Clean, minimal landing zone focused on core governance
+    - Zero additional service integration costs
+    - Ready for account factory, guardrails, and Metro Bank workload OUs
+19. **Action**: Click **"Enable AWS Control Tower"**.
+20. **Expected outcome**: Landing zone deployment begins (~15-30 minutes).
+
+#### 3.6 Monitor landing zone deployment
+21. **Deployment initiated** - "Enable AWS Control Tower" clicked.
+22. **Initial progress screen** shows:
+    - Organizational units: 1 registered (Root - Enabled)
+    - Enrolled accounts: 1 (dejistrainingrootaccount - Not enabled)
+    - Controls summary: 0 preventive/detective/proactive (expected during setup)
+23. **Expected timeline**: 15-30 minutes for full landing zone deployment.
+24. **During deployment**:
+    - Security OU: log-archive + audit accounts being created
+    - Sandbox OU: ready for future dev/test accounts
+    - Guardrails: baseline preventive/detective controls deploying
+25. **Do not close browser** - monitor progress until all steps complete.
+
