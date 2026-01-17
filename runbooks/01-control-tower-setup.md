@@ -45,3 +45,13 @@ Recorded Control Tower home Region as us-east-1 for this training org.
 6. Result for this org:
    - Log group **not present**; no CloudWatch cleanup required before re-enabling Control Tower.
 7. Record these findings in `docs/02-current-state-assessment.md` under "Control Tower S3 logging buckets (pre-cleanup)" and "CloudWatch log groups (pre-cleanup)" for auditability.
+#### 3.2 Configure governed Regions
+
+4. In the "Governed Regions" section, select:
+   - Home Region (pre-selected): us-east-1.
+   - Additional governed Region: eu-west-2 (London).
+5. Rationale:
+   - us-east-1 hosts Control Tower’s home-region services and shared governance components.
+   - eu-west-2 is the primary workload Region for UK banking workloads, aligning with Metro Bank’s data residency expectations.
+6. Leave all other Regions unchecked to reduce complexity and operational overhead for this POC.
+7. Click **Next** to move to "Create organizational units (OUs)".
