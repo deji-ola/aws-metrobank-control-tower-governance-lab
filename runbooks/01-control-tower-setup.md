@@ -33,4 +33,15 @@ Recorded Control Tower home Region as us-east-1 for this training org.
 
 ### Step 2 – Validate cleanup prerequisites
 
-(TBD)
+1. In the us-east-1 Region, open the S3 console and list all buckets.
+2. Verify whether any buckets exist with reserved AWS Control Tower names:
+   - aws-controltower-logs-*
+   - aws-controltower-s3-access-logs-*
+3. Result for this org:
+   - No buckets found with Control Tower reserved names.
+   - Existing buckets belong to previous labs (CloudFormation, Elastic Beanstalk, Athena, SageMaker, static websites, etc.), so no S3 cleanup is required for Control Tower.
+4. Open CloudWatch → Logs → Log groups in us-east-1.
+5. Search for the log group **aws-controltower/CloudTrailLogs**.
+6. Result for this org:
+   - Log group **not present**; no CloudWatch cleanup required before re-enabling Control Tower.
+7. Record these findings in `docs/02-current-state-assessment.md` under "Control Tower S3 logging buckets (pre-cleanup)" and "CloudWatch log groups (pre-cleanup)" for auditability.
