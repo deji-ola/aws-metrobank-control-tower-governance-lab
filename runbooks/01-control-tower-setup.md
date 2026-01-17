@@ -55,3 +55,27 @@ Recorded Control Tower home Region as us-east-1 for this training org.
    - eu-west-2 is the primary workload Region for UK banking workloads, aligning with Metro Bank’s data residency expectations.
 6. Leave all other Regions unchecked to reduce complexity and operational overhead for this POC.
 7. Click **Next** to move to "Create organizational units (OUs)".
+
+#### 3.3 Create organizational units (OUs)
+8. Control Tower proposes creating 2 foundational OUs under Root:
+   - **Security** (for log-archive and audit accounts) - Status: "Not created"
+   - **Sandbox** (recommended for dev/test workloads) - Status: "Not created"  
+9. **Action**: Click **"Create OUs"** button.
+10. Wait for both OUs to show **"Created"** status.
+11. Metro Bank alignment:
+    - Security OU: will contain log-archive, security-audit accounts
+    - Sandbox OU: for non-production experimentation
+    - Existing Prod/Testing OUs remain under Root (to be refined later)
+12. Click **Next** → proceed to "Configure Service integrations".
+
+#### 3.4 Configure Service integrations (optional)
+13. **AWS Config for detective controls**: Clicked **"Disable AWS Config"**.
+    - Aggregator account field requires 12-digit account ID (not available yet).
+14. **AWS CloudTrail Centralized logging**: Clicked **"Disable AWS CloudTrail"**.
+    - CloudTrail administrator field requires account ID (not available yet).
+15. **Rationale**: 
+    - Optional integrations requiring non-existent accounts cannot be configured now.
+    - Core Control Tower landing zone (OUs, guardrails, basic logging) sufficient for Metro Bank POC.
+    - Cost control: avoids additional Config/CloudTrail aggregator setup.
+16. Clicked **Next** → proceed to "Review and enable AWS Control Tower".
+
