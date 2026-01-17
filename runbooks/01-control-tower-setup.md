@@ -106,3 +106,22 @@ Recorded Control Tower home Region as us-east-1 for this training org.
     - Guardrails: baseline preventive/detective controls deploying
 25. **Do not close browser** - monitor progress until all steps complete.
 
+### Step 4 – Verify creation of core accounts and OUs
+
+#### 4.1 Validate landing zone deployment completion
+1. **Landing zone status**: "AWS Control Tower was enabled successfully" confirmed.
+2. **Timeline**: Deployment completed in ~13 minutes (within expected 15-30 min window).
+3. **Final structure** (9 resources total):
+
+#### 4.2 Metro Bank governance alignment
+4. **Security OU**: Ready for log-archive + audit accounts (populate via Account Factory next).
+5. **Sandbox OU**: Ready for dev/test workload accounts.
+6. **Prod OU**: Contains 1 production banking account (aligns with Metro Bank payments platform).
+7. **Baseline established**: Multi-account structure with Control Tower governance plane active.
+
+#### 4.3 Next steps preview
+- Populate Security OU with log-archive, audit accounts
+- Enable baseline guardrails on OUs
+- Create Metro Bank workload accounts via Account Factory
+- Test preventive/detective controls
+
